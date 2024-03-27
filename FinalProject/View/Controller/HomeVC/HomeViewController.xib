@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="FinalProject" customModuleProvider="target">
+            <connections>
+                <outlet property="headerHeightConstraint" destination="ITc-kz-Zaz" id="bOF-cZ-Y1g"/>
+                <outlet property="searchBar" destination="9Ux-Mc-BKC" id="4pP-jS-Ys4"/>
+                <outlet property="tableView" destination="uNU-eU-sQK" id="Lae-6n-m0K"/>
+                <outlet property="titleLabel" destination="NWs-fS-AGE" id="5c9-5t-GOz"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uNU-eU-sQK">
+                    <rect key="frame" x="0.0" y="174" width="414" height="688"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c3L-BC-0Vu" userLabel="Header View">
+                    <rect key="frame" x="0.0" y="44" width="414" height="130"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWs-fS-AGE">
+                            <rect key="frame" x="20" y="0.0" width="344" height="64.5"/>
+                            <attributedString key="attributedText">
+                                <fragment content="Make your own food, stay at home">
+                                    <attributes>
+                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                        <font key="NSFont" metaFont="system" size="27"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <searchBar contentMode="redraw" verticalCompressionResistancePriority="749" searchBarStyle="minimal" text="" translatesAutoresizingMaskIntoConstraints="NO" id="9Ux-Mc-BKC">
+                            <rect key="frame" x="10" y="64.5" width="394" height="65.5"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gh2-tg-BiF">
+                            <rect key="frame" x="0.0" y="64.5" width="414" height="65.5"/>
+                            <connections>
+                                <action selector="searchBarTouchUpInside:" destination="-1" eventType="touchUpInside" id="InN-hT-l6z"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="gh2-tg-BiF" firstAttribute="leading" secondItem="c3L-BC-0Vu" secondAttribute="leading" id="4kI-sP-7mF"/>
+                        <constraint firstItem="NWs-fS-AGE" firstAttribute="leading" secondItem="c3L-BC-0Vu" secondAttribute="leading" constant="20" id="9a8-o2-y4C"/>
+                        <constraint firstAttribute="bottom" secondItem="9Ux-Mc-BKC" secondAttribute="bottom" id="DYn-ZM-ywg"/>
+                        <constraint firstAttribute="height" constant="130" id="ITc-kz-Zaz"/>
+                        <constraint firstAttribute="trailing" secondItem="NWs-fS-AGE" secondAttribute="trailing" constant="50" id="Mbc-1F-y7i"/>
+                        <constraint firstItem="9Ux-Mc-BKC" firstAttribute="leading" secondItem="c3L-BC-0Vu" secondAttribute="leading" constant="10" id="Pyf-dX-0Mb"/>
+                        <constraint firstAttribute="bottom" secondItem="gh2-tg-BiF" secondAttribute="bottom" id="Q4A-XI-Nlu"/>
+                        <constraint firstItem="gh2-tg-BiF" firstAttribute="top" secondItem="NWs-fS-AGE" secondAttribute="bottom" id="XWZ-7T-hjR"/>
+                        <constraint firstItem="NWs-fS-AGE" firstAttribute="top" secondItem="c3L-BC-0Vu" secondAttribute="top" id="ccX-pa-kyP"/>
+                        <constraint firstItem="9Ux-Mc-BKC" firstAttribute="top" secondItem="NWs-fS-AGE" secondAttribute="bottom" id="gd9-8H-yo8"/>
+                        <constraint firstAttribute="trailing" secondItem="9Ux-Mc-BKC" secondAttribute="trailing" constant="10" id="o06-Qs-ced"/>
+                        <constraint firstAttribute="trailing" secondItem="gh2-tg-BiF" secondAttribute="trailing" id="rWP-Cu-rBf"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="uNU-eU-sQK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="4qb-9T-jpS"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="uNU-eU-sQK" secondAttribute="trailing" id="IUG-xK-uZP"/>
+                <constraint firstItem="c3L-BC-0Vu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Xcd-0Z-bk1"/>
+                <constraint firstItem="c3L-BC-0Vu" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="l0s-Ho-cSb"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="uNU-eU-sQK" secondAttribute="bottom" id="xAN-dX-BvI"/>
+                <constraint firstItem="c3L-BC-0Vu" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="xxu-qV-MJu"/>
+                <constraint firstItem="uNU-eU-sQK" firstAttribute="top" secondItem="c3L-BC-0Vu" secondAttribute="bottom" id="zeD-fi-fbQ"/>
+            </constraints>
+            <point key="canvasLocation" x="13.043478260869566" y="118.52678571428571"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
